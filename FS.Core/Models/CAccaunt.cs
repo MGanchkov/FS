@@ -2,35 +2,39 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace FS.Models;
 
-public class CAccaunt : IEntry
+[method: JsonConstructor]
+public class CAccaunt(long id, string name, string login, string password) : IEntry
 {
+
     #region ctor
+
+    public CAccaunt() : this(0, string.Empty, string.Empty, string.Empty) { }
 
     #endregion
 
     #region Property
 
-
-    public long ID { get; set; }
+    public long ID { get; set; } = id;
 
     /// <summary>
     /// Отображаемое имя
     /// </summary>
-    public string Name { get; set; }
+    public string Name { get; set; } = name;
 
     /// <summary>
     /// Логин подключения
     /// </summary>    
-    public string Login { get; set; }
+    public string Login { get; set; } = login;
 
     /// <summary>
     /// Пароль для подключения
     /// </summary>
-    public string Password { get; set; }
+    public string Password { get; set; } = password;
 
     #endregion
 
