@@ -8,6 +8,10 @@ namespace FS.Models;
 
 public interface IEntry
 {
+
+    /// <summary>
+    /// Уникальный идентификатор
+    /// </summary>
     public long ID { get; set; }
 
 }
