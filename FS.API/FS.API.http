@@ -1,0 +1,6 @@
+@FS.API_HostAddress = http://localhost:5200
+
+GET {{FS.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
